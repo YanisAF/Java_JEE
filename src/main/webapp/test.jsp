@@ -8,9 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}style/styles.css">
     <title>test</title>
 </head>
 <body>
+
+<h1> Ma page !!!</h1>
 
 </body>
 </html>

@@ -12,5 +12,6 @@
 <a href="mon-survlet">Mon Servlet</a>
 <a href="mon-deuxieme-servlet">Mon Deuxieme Servlet</a>
 <a href="troisieme-servlet">Mon Troisieme Servlet</a>
+<a href="cats">Ma list de chats</a>
 </body>
 </html>
