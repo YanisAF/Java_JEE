@@ -36,7 +36,7 @@
             <td><%= cats.get(i).getFavouriteFood() %></td>
             <td><%= cats.get(i).getBirthDate() %></td>
         </tr>
-
+        <% } %>
         </tbody>
 
     </table>
