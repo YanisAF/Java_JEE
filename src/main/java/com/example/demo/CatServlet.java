@@ -33,7 +33,7 @@ public class CatServlet extends HttpServlet {
         String catName = req.getParameter("name");
         String catRace = req.getParameter("race");
         String catFavouriteFood = req.getParameter("favfood");
-        LocalDate dateOfBirth = LocalDate.parse(req.getParameter("date_de_naissance"));
+        String dateOfBirth = String.valueOf(LocalDate.parse(req.getParameter("date_de_naissance")));
         System.out.println(catName);
         System.out.println(catRace);
         System.out.println(catFavouriteFood);
