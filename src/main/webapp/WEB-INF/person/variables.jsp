@@ -1,6 +1,6 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:useBean id="people" type="java.util.ArrayList<com.example.demo.Person>" scope="request" />
+<jsp:useBean id="people" type="java.util.ArrayList<com.example.demo.exercice3.model.Person>" scope="request" />
 <html>
 <head>
     <title>Title</title>

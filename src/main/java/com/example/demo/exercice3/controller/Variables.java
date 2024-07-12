@@ -1,5 +1,6 @@
-package com.example.demo;
+package com.example.demo.exercice3.controller;
 
+import com.example.demo.exercice3.model.Person;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -27,6 +28,6 @@ public class Variables extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("people", people);
-        req.getRequestDispatcher("/variables.jsp").forward(req,resp);
+        req.getRequestDispatcher("/WEB-INF/person/variables.jsp").forward(req,resp);
     }
 }

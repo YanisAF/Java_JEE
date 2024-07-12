@@ -1,5 +1,5 @@
 
-<jsp:useBean id="cats" type="java.util.ArrayList<com.example.demo.Cat>" scope="request" />
+<jsp:useBean id="cats" type="java.util.ArrayList<com.example.demo.exercice4.model.Cat>" scope="request" />
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>

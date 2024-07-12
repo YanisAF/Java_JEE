@@ -1,5 +1,6 @@
-package com.example.demo;
+package com.example.demo.exercice4.controller;
 
+import com.example.demo.exercice4.model.Cat;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -25,7 +26,7 @@ public class CatServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("cats", cats);
-        request.getRequestDispatcher("/WEB-INF/addCats.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/cat/addCats.jsp").forward(request, response);
     }
 
     @Override

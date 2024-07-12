@@ -1,7 +1,6 @@
-package com.example.demo;
+package com.example.demo.exercice4.model;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Cat {
     String name;
