@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Title</title>
-    <%@include file="../assets/bootstrapImports.html"%>
+    <%@include file="/WEB-INF/assets/bootstrapImports.html"%>
 </head>
 <body>
    <h1>Ma page list après l'ajout!! </h1>

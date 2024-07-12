@@ -11,7 +11,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "dogServlet", value = "/dog/*")
+@WebServlet(name = "dogservlet", value = "/dog/*")
 public class DogServlet extends HttpServlet {
 
     private List<Dog> dogs;
@@ -27,16 +27,23 @@ public class DogServlet extends HttpServlet {
         System.out.println(pathInfo);
         switch (pathInfo){
             case "/view":
+                req.setAttribute("dogs", dogs);
                 req.getRequestDispatcher("/WEB-INF/dog/viewDogs.jsp").forward(req,resp);
                 break;
             case "/add":
+                req.setAttribute("dogs", dogs);
                 req.getRequestDispatcher("/WEB-INF/dog/addDogs.jsp").forward(req,resp);
                 break;
             case "/viewlist":
+                req.setAttribute("dogs", dogs);
                 req.getRequestDispatcher("/WEB-INF/dog/viewList.jsp").forward(req,resp);
                 break;
         }
 
     }
 
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+    }
 }
