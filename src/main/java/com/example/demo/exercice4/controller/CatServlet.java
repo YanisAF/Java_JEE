@@ -43,8 +43,9 @@ public class CatServlet extends HttpServlet {
         Cat cat = new Cat(catName, catRace, catFavouriteFood, LocalDate.parse(dateOfBirth));
         cats.add(cat);
 
-        req.setAttribute("cats", cats);
-        req.getRequestDispatcher("/WEB-INF/cat/addCats.jsp").forward(req, resp);
+//        req.setAttribute("cats", cats);
+//        req.getRequestDispatcher("/WEB-INF/cat/addCats.jsp").forward(req, resp);
+        doGet(req,resp);
 
     }
 }
