@@ -39,5 +39,12 @@ public class CatServlet extends HttpServlet {
         System.out.println(catRace);
         System.out.println(catFavouriteFood);
         System.out.println(dateOfBirth);
+
+        Cat cat = new Cat(catName, catRace, catFavouriteFood, LocalDate.parse(dateOfBirth));
+        cats.add(cat);
+
+        req.setAttribute("cats", cats);
+        req.getRequestDispatcher("/WEB-INF/cat/addCats.jsp").forward(req, resp);
+
     }
 }
