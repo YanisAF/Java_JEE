@@ -1,11 +1,12 @@
 package com.example.demo.exercice5.model;
 
-import jakarta.persistence.Entity;
-
+import jakarta.persistence.*;
 import java.time.LocalDate;
 
-
+@Entity
 public class Dog {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String name;
     private String race;
@@ -13,6 +14,16 @@ public class Dog {
 
     public Dog(int id, String name, String race, LocalDate dateOfBirth) {
         this.id = id;
+        this.name = name;
+        this.race = race;
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public Dog() {
+
+    }
+
+    public Dog(String name, String race, LocalDate dateOfBirth) {
         this.name = name;
         this.race = race;
         this.dateOfBirth = dateOfBirth;

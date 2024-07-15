@@ -1,5 +1,4 @@
 
-<jsp:useBean id="dogs" type="java.util.ArrayList<com.example.demo.exercice5.model.Dog>" scope="request" />
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -15,7 +14,7 @@
     <hr>
     <div class="col-8 offset-2 text-bg-dark p-3">
     <h1 class="text-center text-light">Liste de chien(s)</h1>
-    <form action="dog" method="post">
+    <form action="${pageContext.request.contextPath}/dog/addlist" method="post">
         <div class="mb-3">
             <label for="name" class="form-label">Nom :</label>
             <input type="text" class="form-control mb-3" id="name" name="name" >
@@ -26,7 +25,7 @@
         </div>
         <div class="mb-3">
             <label for="date_de_naissance" class="form-label">Date de naissance :</label>
-            <input type="date" class="form-control mb-3 col-sm-3" id="date_de_naissance" name="date_de_naissance" >
+            <input type="date" class="form-control mb-3 col-sm-3" id="date_de_naissance" name="dateOfBirth" >
         </div>
         <button class="btn btn-primary bg-dark text-light">Add</button>
     </form>

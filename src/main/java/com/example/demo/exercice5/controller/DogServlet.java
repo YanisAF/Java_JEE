@@ -31,10 +31,9 @@ public class DogServlet extends HttpServlet {
                 req.getRequestDispatcher("/WEB-INF/dog/viewDogs.jsp").forward(req,resp);
                 break;
             case "/add":
-                req.setAttribute("dogs", dogs);
                 req.getRequestDispatcher("/WEB-INF/dog/addDogs.jsp").forward(req,resp);
                 break;
-            case "/viewlist":
+            case "/addlist":
                 req.setAttribute("dogs", dogs);
                 req.getRequestDispatcher("/WEB-INF/dog/viewList.jsp").forward(req,resp);
                 break;
@@ -44,6 +43,15 @@ public class DogServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String dogName = req.getParameter("name");
+        String dogRace = req.getParameter("race");
+        LocalDate dogBirth = LocalDate.parse(req.getParameter("dateOfBirth"));
+        System.out.println(dogName);
+        System.out.println(dogRace);
+        System.out.println(dogBirth);
 
+        Dog dog = new Dog(dogName, dogRace, dogBirth);
+        dogs.add(dog);
+        doGet(req,resp);
     }
 }
