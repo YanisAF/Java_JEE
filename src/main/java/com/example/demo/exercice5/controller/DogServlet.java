@@ -1,6 +1,7 @@
 package com.example.demo.exercice5.controller;
 
 import com.example.demo.exercice5.model.Dog;
+import com.example.demo.exercice5.repository.DogRepository;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -43,15 +44,6 @@ public class DogServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String dogName = req.getParameter("name");
-        String dogRace = req.getParameter("race");
-        LocalDate dogBirth = LocalDate.parse(req.getParameter("dateOfBirth"));
-        System.out.println(dogName);
-        System.out.println(dogRace);
-        System.out.println(dogBirth);
 
-        Dog dog = new Dog(dogName, dogRace, dogBirth);
-        dogs.add(dog);
-        doGet(req,resp);
     }
 }
